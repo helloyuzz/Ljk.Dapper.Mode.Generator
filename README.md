@@ -1,0 +1,1 @@
+# Ljk.Dapper.Mode.Generator
