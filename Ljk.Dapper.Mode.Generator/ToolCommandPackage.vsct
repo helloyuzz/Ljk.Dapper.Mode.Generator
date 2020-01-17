@@ -36,14 +36,14 @@
          group as the part of a menu contained between two lines. The parent of a group
          must be a menu. -->
     <Groups>
-      <!--<Group guid="guidTestCommandPackageCmdSet" id="MyMenuGroup" priority="0x0600">
+      <!--<Group guid="guidLjkCommandPackageCmdSet" id="MyMenuGroup" priority="0x0600">
         <Parent guid="guidSHLMainMenu" id="IDM_VS_MENU_TOOLS"/>
       </Group>-->
-      <Group guid="guidTestCommandPackageCmdSet" id="MyMenuGroup" priority="0x0600">
-        <Parent guid="guidTestCommandPackageCmdSet" id="TopLevelMenu"/>
+      <Group guid="guidLjkCommandPackageCmdSet" id="MyMenuGroup" priority="0x0600">
+        <Parent guid="guidLjkCommandPackageCmdSet" id="TopLevelMenu"/>
       </Group>
-      <Group guid="guidTestCommandPackageCmdSet" id="SubMenuGroup" priority="0x0000">
-        <Parent guid="guidTestCommandPackageCmdSet" id="SubMenu"/>
+      <Group guid="guidLjkCommandPackageCmdSet" id="SubMenuGroup" priority="0x0000">
+        <Parent guid="guidLjkCommandPackageCmdSet" id="SubMenu"/>
       </Group>
     </Groups>
 
@@ -58,38 +58,38 @@
               <CommandFlag>DefaultInvisible</CommandFlag>
               <CommandFlag>DynamicVisibility</CommandFlag>
           If you do not want an image next to your command, remove the Icon node /> -->
-      <Button guid="guidTestCommandPackageCmdSet" id="lanuch_CommandId" priority="0x0100" type="Button">
-        <Parent guid="guidTestCommandPackageCmdSet" id="MyMenuGroup" />
+      <Button guid="guidLjkCommandPackageCmdSet" id="lanuch_CommandId" priority="0x0100" type="Button">
+        <Parent guid="guidLjkCommandPackageCmdSet" id="MyMenuGroup" />
         <Icon guid="guidImages" id="bmpPicArrows" />
         <Strings>
           <ButtonText>Launch Generator...</ButtonText>
         </Strings>
       </Button>
-      <!--<Button guid="guidTestCommandPackageCmdSet" id="SubMenu" priority="0x0101" type="Button">
-        <Parent guid="guidTestCommandPackageCmdSet" id="MyMenuGroup" />
+      <!--<Button guid="guidLjkCommandPackageCmdSet" id="SubMenu" priority="0x0101" type="Button">
+        <Parent guid="guidLjkCommandPackageCmdSet" id="MyMenuGroup" />
         <Icon guid="guidImages" id="bmpPic1" />
         <Strings>
           <ButtonText>See also</ButtonText>
         </Strings>
       </Button>-->
-      <Button guid="guidTestCommandPackageCmdSet" id="nuGet_SubCommand" priority="0x0000" type="Button">
-        <Parent guid="guidTestCommandPackageCmdSet" id="SubMenuGroup" />
+      <Button guid="guidLjkCommandPackageCmdSet" id="nuGet_SubCommand" priority="0x0000" type="Button">
+        <Parent guid="guidLjkCommandPackageCmdSet" id="SubMenuGroup" />
         <Icon guid="guidImages" id="bmpPic1" />
         <Strings>
           <CommandName>nuGet_SubCommand</CommandName>
           <ButtonText>Goto https://www.nuget.org/packages/Ljk.Dapper</ButtonText>
         </Strings>
       </Button>
-      <Button guid="guidTestCommandPackageCmdSet" id="market_SubCommand" priority="0x0000" type="Button">
-        <Parent guid="guidTestCommandPackageCmdSet" id="SubMenuGroup"/>
+      <Button guid="guidLjkCommandPackageCmdSet" id="market_SubCommand" priority="0x0000" type="Button">
+        <Parent guid="guidLjkCommandPackageCmdSet" id="SubMenuGroup"/>
         <Icon guid="guidImages" id="bmpPic1"/>
         <Strings>
           <CommandName>market_SubCommand</CommandName>
           <ButtonText>Goto https://www.visualstudio.com/packages/Ljk.Dapper</ButtonText>
         </Strings>
       </Button>
-      <Button guid="guidTestCommandPackageCmdSet" id="about_SubCommand" priority="0x0106" type="Button">
-        <Parent guid="guidTestCommandPackageCmdSet" id="MyMenuGroup"/>
+      <Button guid="guidLjkCommandPackageCmdSet" id="about_SubCommand" priority="0x0106" type="Button">
+        <Parent guid="guidLjkCommandPackageCmdSet" id="MyMenuGroup"/>
         <Icon guid="guidImages" id="bmpPic1"/>
         <Strings>
           <CommandName>about_SubCommand</CommandName>
@@ -99,15 +99,15 @@
       </Button>
     </Buttons>
     <Menus>
-      <Menu guid="guidTestCommandPackageCmdSet" id="TopLevelMenu" priority="0x700" type="Menu">
+      <Menu guid="guidLjkCommandPackageCmdSet" id="TopLevelMenu" priority="0x700" type="Menu">
         <Parent guid="guidSHLMainMenu" id="IDG_VS_MM_TOOLSADDINS" />
         <Strings>
           <ButtonText>Ljk.Dapper</ButtonText>
           <CommandName>Ljk.Dapper</CommandName>
         </Strings>
       </Menu>
-      <Menu guid="guidTestCommandPackageCmdSet" id="SubMenu" priority="0x0100"  type="Menu">
-        <Parent guid="guidTestCommandPackageCmdSet" id="MyMenuGroup"/>
+      <Menu guid="guidLjkCommandPackageCmdSet" id="SubMenu" priority="0x0100"  type="Menu">
+        <Parent guid="guidLjkCommandPackageCmdSet" id="MyMenuGroup"/>
         <CommandFlag>IconAndText</CommandFlag>
         <Strings>
           <ButtonText>See also</ButtonText>
@@ -115,8 +115,8 @@
           <ToolTipText>Visit Project Site</ToolTipText>
         </Strings>
       </Menu>
-      <!--<Menu guid="guidTestCommandPackageCmdSet" id="about_SubCommand" priority="0x0101" type="Menu">
-        <Parent guid="guidTestCommandPackageCmdSet" id="MyMenuGroup"/>
+      <!--<Menu guid="guidLjkCommandPackageCmdSet" id="about_SubCommand" priority="0x0101" type="Menu">
+        <Parent guid="guidLjkCommandPackageCmdSet" id="MyMenuGroup"/>
         <Strings>
           <ButtonText>About</ButtonText>
           
@@ -140,7 +140,7 @@
     <GuidSymbol name="guidTestCommandPackage" value="{7e182349-65c8-4631-ba71-dd977e584487}" />
 
     <!-- This is the guid used to group the menu commands together -->
-    <GuidSymbol name="guidTestCommandPackageCmdSet" value="{e5ffb04b-a6df-47ee-9ba9-700c03d0edd0}">
+    <GuidSymbol name="guidLjkCommandPackageCmdSet" value="{e5ffb04b-a6df-47ee-9ba9-700c03d0edd0}">
       <IDSymbol name="MyMenuGroup" value="0x1020" />
       <IDSymbol name="lanuch_CommandId" value="0x0100" />
       <IDSymbol name="TopLevelMenu" value="0x1021"/>
