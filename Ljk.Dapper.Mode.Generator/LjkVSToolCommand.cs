@@ -13,7 +13,7 @@ namespace Ljk.Dapper.Mode.Generator {
     /// <summary>
     /// Command handler
     /// </summary>
-    internal sealed class ToolCommand {
+    internal sealed class LjkVSToolCommand {
         /// <summary>
         /// Command ID.
         /// </summary>
@@ -33,12 +33,12 @@ namespace Ljk.Dapper.Mode.Generator {
         private readonly AsyncPackage package;
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="ToolCommand"/> class.
+        /// Initializes a new instance of the <see cref="LjkVSToolCommand"/> class.
         /// Adds our command handlers for menu (commands must exist in the command table file)
         /// </summary>
         /// <param name="package">Owner package, not null.</param>
         /// <param name="commandService">Command service to add command to, not null.</param>
-        private ToolCommand(AsyncPackage package,OleMenuCommandService commandService) {
+        private LjkVSToolCommand(AsyncPackage package,OleMenuCommandService commandService) {
             this.package = package ?? throw new ArgumentNullException(nameof(package));
             commandService = commandService ?? throw new ArgumentNullException(nameof(commandService));
 
@@ -61,7 +61,7 @@ namespace Ljk.Dapper.Mode.Generator {
         /// <summary>
         /// Gets the instance of the command.
         /// </summary>
-        public static ToolCommand Instance {
+        public static LjkVSToolCommand Instance {
             get;
             private set;
         }
@@ -85,7 +85,7 @@ namespace Ljk.Dapper.Mode.Generator {
             await ThreadHelper.JoinableTaskFactory.SwitchToMainThreadAsync(package.DisposalToken);
 
             OleMenuCommandService commandService = await package.GetServiceAsync((typeof(IMenuCommandService))) as OleMenuCommandService;
-            Instance = new ToolCommand(package,commandService);
+            Instance = new LjkVSToolCommand(package,commandService);
         }
 
         /// <summary>
@@ -109,7 +109,7 @@ namespace Ljk.Dapper.Mode.Generator {
                     break;
                 case 0x0107:    // about_SubCommand
                     ThreadHelper.ThrowIfNotOnUIThread();                    
-                    string message = "Ljk.Dapper.ModeGenerator v1.1";
+                    string message = "Ljk.Dapper.ModeGenerator v1.1\r\nBuild time:" + DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss fff");
                     string title = "About";
 
                     // Show a message box to prove we were here

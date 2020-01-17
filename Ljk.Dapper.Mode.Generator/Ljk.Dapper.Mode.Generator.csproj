@@ -56,8 +56,8 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ToolCommand.cs" />
-    <Compile Include="ToolCommandPackage.cs" />
+    <Compile Include="LjkVSToolCommand.cs" />
+    <Compile Include="LjkVSToolCommandPackage.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="com.yuzz.DbGenerator.exe.config">

@@ -34,18 +34,18 @@ namespace Ljk.Dapper.Mode.Generator {
     [PackageRegistration(UseManagedResourcesOnly = true,AllowsBackgroundLoading = true)]
     [InstalledProductRegistration("#110","#112","1.0",IconResourceID = 400)] // Info on this package for Help/About
     [ProvideMenuResource("Menus.ctmenu",1)]
-    [Guid(TestCommandPackage.PackageGuidString)]
+    [Guid(LjkVSToolCommandPackage.PackageGuidString)]
     [SuppressMessage("StyleCop.CSharp.DocumentationRules","SA1650:ElementDocumentationMustBeSpelledCorrectly",Justification = "pkgdef, VS and vsixmanifest are valid VS terms")]
-    public sealed class TestCommandPackage:AsyncPackage {
+    public sealed class LjkVSToolCommandPackage:AsyncPackage {
         /// <summary>
         /// TestCommandPackage GUID string.
         /// </summary>
         public const string PackageGuidString = "7e182349-65c8-4631-ba71-dd977e584487";
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="TestCommandPackage"/> class.
+        /// Initializes a new instance of the <see cref="LjkVSToolCommandPackage"/> class.
         /// </summary>
-        public TestCommandPackage() {
+        public LjkVSToolCommandPackage() {
             // Inside this method you can place any initialization code that does not require
             // any Visual Studio service because at this point the package object is created but
             // not sited yet inside Visual Studio environment. The place to do all the other
@@ -65,7 +65,7 @@ namespace Ljk.Dapper.Mode.Generator {
             // When initialized asynchronously, the current thread may be a background thread at this point.
             // Do any initialization that requires the UI thread after switching to the UI thread.
             await this.JoinableTaskFactory.SwitchToMainThreadAsync(cancellationToken);
-            await ToolCommand.InitializeAsync(this);
+            await LjkVSToolCommand.InitializeAsync(this);
         }
 
         #endregion
