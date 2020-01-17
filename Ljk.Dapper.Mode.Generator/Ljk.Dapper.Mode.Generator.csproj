@@ -96,6 +96,8 @@
     <Content Include="index.html" />
     <Content Include="Resources\ToolCommand.png" />
     <Content Include="Resources\ToolCommandPackage.ico" />
+    <Content Include="Screenshot\pic1.png" />
+    <Content Include="Screenshot\pic2.png" />
     <Content Include="stylesheet.css" />
     <VSCTCompile Include="ToolCommandPackage.vsct">
       <ResourceName>Menus.ctmenu</ResourceName>
