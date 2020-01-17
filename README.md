@@ -1,7 +1,11 @@
 # Ljk.Dapper.Mode.Generator VISX Project
 
 See also:  
+* Visual studio Marketplace:  
 https://marketplace.visualstudio.com/items?itemName=helloyuzz.LjkDapper
+
+* Nuget.org:  
+https://www.nuget.org/packages/Ljk.Dapper
 
 ```csharp
 public const int lanuch_CommandId = 0x0100;
