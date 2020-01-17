@@ -72,7 +72,7 @@ Screent shot:
 <img src="https://github.com/helloyuzz/Ljk.Dapper.Mode.Generator/blob/master/Ljk.Dapper.Mode.Generator/Screenshot/pic2.png" width="600px" height="300px">
 
 
-**If project can't build, check Microsoft.VSSDK.BuildTools:
+If project can't build, check **Microsoft.VSSDK.BuildTools**:
 ```csharp
 Install-Package Microsoft.VSSDK.BuildTools -Version 16.5.1032
 ```
