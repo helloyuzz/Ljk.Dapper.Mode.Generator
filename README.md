@@ -1,7 +1,11 @@
 # Ljk.Dapper.Mode.Generator VISX Project
 
 See also:  
+* Visual studio Marketplace:  
 https://marketplace.visualstudio.com/items?itemName=helloyuzz.LjkDapper
+
+* Nuget.org:  
+https://www.nuget.org/packages/Ljk.Dapper
 
 ```csharp
 public const int lanuch_CommandId = 0x0100;
@@ -67,3 +71,8 @@ Screent shot:
 
 <img src="https://github.com/helloyuzz/Ljk.Dapper.Mode.Generator/blob/master/Ljk.Dapper.Mode.Generator/Screenshot/pic2.png" width="600px" height="300px">
 
+
+If project can't build, check **Microsoft.VSSDK.BuildTools**:
+```csharp
+Install-Package Microsoft.VSSDK.BuildTools -Version 16.5.1032
+```
